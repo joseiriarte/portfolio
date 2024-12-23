@@ -1,0 +1,20 @@
+<button
+  id='scrollButton'
+  class='w-fit rounded-full p-2 sticky bottom-[7%] left-[90%] border border-endeavour-600 bg-endeavour-500 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-200'
+>
+  <img
+    src='/arrowup.svg'
+    alt='Scroll to the top'
+    class='w-[40px] max-sm:w-[25px]'
+  />
+</button>
+<script>
+  const scrollButton = document.querySelector('#scrollButton');
+  scrollButton.addEventListener('click', () => {
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
+</script>

@@ -1,0 +1,87 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+const tags = [
+  {
+    id: 0,
+    text: 'HTML',
+    color: 'bg-tag-html-900 text-tag-html-200',
+  },
+  {
+    id: 1,
+    text: 'CSS',
+    color: 'bg-tag-css-900 text-tag-css-200',
+  },
+  {
+    id: 2,
+    text: 'JavaScript',
+    color: 'bg-tag-javascript-900 text-tag-javascript-200',
+  },
+  {
+    id: 3,
+    text: 'TypeScript',
+    color: 'bg-tag-typescript-900 text-tag-typescript-200',
+  },
+  {
+    id: 4,
+    text: 'React',
+    color: 'bg-tag-react-900 text-tag-react-200',
+  },
+  {
+    id: 5,
+    text: 'Tailwind CSS',
+    color: 'bg-tag-tailwind-900 text-tag-tailwind-200',
+  },
+];
+
+const projects = [
+  {
+    id: 0,
+    name: 'howmuch',
+    description: 'A React app to track expenses and divide them among friends.',
+    image: '/how-much.webp',
+    tags: [tags[0], tags[1], tags[2], tags[4], tags[5]],
+    appUrl: 'https://how-much-pied.vercel.app',
+    repoUrl: 'https://github.com/joseiriarte/how-much',
+  },
+  {
+    id: 1,
+    name: 'Urban Wear',
+    description: 'Clothing e-commerce front end built with React and Tailwind.',
+    image: '/urban-wear.webp',
+    tags: [tags[0], tags[1], tags[2], tags[4], tags[5]],
+    appUrl: 'https://urban-wear.vercel.app',
+    repoUrl: 'https://github.com/joseiriarte/urban-wear',
+  },
+  {
+    id: 2,
+    name: 'Random Pokémon Generator',
+    description: 'Dynamic website that shows the user a random Pokémon and some data.',
+    image: '/random-pokemon-generator.webp',
+    tags: [tags[0], tags[1], tags[2], tags[4], tags[5]],
+    appUrl: 'https://random-pokemon-generator-ecru.vercel.app',
+    repoUrl: 'https://github.com/joseiriarte/random-pokemon-generator',
+  },
+];
+---
+
+<section
+  class='card-global max-w-4xl col-span-4 scroll-m-48'
+  id='projects'
+>
+  <h2 class='card-title mb-12'>Projects</h2>
+  <ul class='flex flex-wrap gap-6'>
+    {
+      projects.map((project) => (
+        <ProjectCard
+          name={project.name}
+          description={project.description}
+          image={project.image}
+          tags={project.tags}
+          appUrl={project.appUrl}
+          repoUrl={project.repoUrl}
+        />
+      ))
+    }
+  </ul>
+</section>

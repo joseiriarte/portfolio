@@ -1,0 +1,88 @@
+---
+import '@fontsource-variable/onest';
+import Scroll from '../components/Scroll.astro';
+---
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta
+      name='viewport'
+      content='width=device-width, initial-scale=1.0'
+    />
+    <meta
+      name='description'
+      content='Jose Iriarte | Front-end developer | Portfolio'
+    />
+    <link
+      rel='icon'
+      type='image/svg+xml'
+      href='favicon.svg'
+    />
+    <title>Jose Iriarte | Portfolio</title>
+  </head>
+  <body class='bg-endeavour-1000 text-neutral-50'>
+    <div
+      class='absolute top-0 z-[-2] h-screen w-screen bg-endeavour-1000 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(11,84,168,0.5),rgba(21,29,40,0))]'
+    >
+    </div>
+
+    <slot />
+    <Scroll />
+
+    <style is:global>
+      html {
+        font-family: 'Onest Variable', system-ui, sans-serif;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+
+      .card-global {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 3rem;
+        /* border-radius: 0.5rem;
+        background: #10396a80;
+
+        backdrop-filter: blur(6.5px);
+        -webkit-backdrop-filter: blur(6.5px);
+
+        --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow); */
+      }
+
+      .card-item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.75rem;
+        padding: 1.5rem;
+        border-radius: 1rem;
+        border: 1px solid #0d427f;
+        background: #0d427f80;
+
+        backdrop-filter: blur(6.5px);
+        -webkit-backdrop-filter: blur(6.5px);
+
+        --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+        --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+        box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+      }
+
+      .card-title {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        font-weight: 600;
+      }
+    </style>
+  </body>
+</html>
