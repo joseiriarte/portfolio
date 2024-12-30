@@ -1,6 +1,8 @@
 ---
 import ProjectCard from './ProjectCard.astro';
 
+const { translateStrings } = Astro.props;
+
 const tags = [
   {
     id: 0,
@@ -38,7 +40,7 @@ const projects = [
   {
     id: 0,
     name: 'howmuch',
-    description: 'A React app to track expenses and divide them among friends.',
+    description: translateStrings('howmuch.description'),
     image: '/how-much.webp',
     tags: [tags[0], tags[1], tags[2], tags[4], tags[5]],
     appUrl: 'https://how-much-pied.vercel.app',
@@ -47,7 +49,7 @@ const projects = [
   {
     id: 1,
     name: 'Urban Wear',
-    description: 'Clothing e-commerce front end built with React and Tailwind.',
+    description: translateStrings('urbanwear.description'),
     image: '/urban-wear.webp',
     tags: [tags[0], tags[1], tags[2], tags[4], tags[5]],
     appUrl: 'https://urban-wear.vercel.app',
@@ -56,7 +58,7 @@ const projects = [
   {
     id: 2,
     name: 'Random Pokémon Generator',
-    description: 'Dynamic website that shows the user a random Pokémon and some data.',
+    description: translateStrings('randompokemongenerator.description'),
     image: '/random-pokemon-generator.webp',
     tags: [tags[0], tags[1], tags[2], tags[4], tags[5]],
     appUrl: 'https://random-pokemon-generator-ecru.vercel.app',
@@ -66,10 +68,10 @@ const projects = [
 ---
 
 <section
-  class='card-global max-w-4xl col-span-4 scroll-m-48'
+  class='card-global w-full scroll-m-16'
   id='projects'
 >
-  <h2 class='card-title mb-12'>Projects</h2>
+  <h2 class='card-title mb-12'>{translateStrings('projects.title')}</h2>
   <ul class='flex flex-wrap gap-6'>
     {
       projects.map((project) => (
@@ -80,6 +82,7 @@ const projects = [
           tags={project.tags}
           appUrl={project.appUrl}
           repoUrl={project.repoUrl}
+          translateStrings={translateStrings}
         />
       ))
     }

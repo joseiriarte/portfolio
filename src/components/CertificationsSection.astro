@@ -1,6 +1,10 @@
-<section class='card-global max-w-md h-full col-span-2'>
-  <h2 class='card-title mb-6'>Certifications</h2>
-  <div class='card-item flex-col w-full'>
+---
+const { translateStrings } = Astro.props;
+---
+
+<section class='card-global w-full'>
+  <h2 class='card-title mb-6'>{translateStrings('certifications.title')}</h2>
+  <div class='card-item flex-col w-fit'>
     <p class='opacity-90 text-sm'>2023</p>
     <p class='text-lg'>Oracle Next Education Front-end</p>
   </div>

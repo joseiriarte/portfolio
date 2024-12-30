@@ -1,23 +1,27 @@
-<section class='card-global max-w-4xl col-span-4 row-span-1'>
-  <div class='flex justify-center items-center gap-32'>
+---
+const { translateStrings } = Astro.props;
+---
+
+<section class='card-global w-full'>
+  <div class='flex flex-col justify-center items-center gap-12'>
     <div class='flex flex-col justify-center items-center'>
       <h1 class='mb-3 text-6xl font-bold'>Jose Iriarte</h1>
-      <p class='mb-6 text-4xl text-endeavour-100 font-medium'>Front-end Developer</p>
+      <p class='mb-6 text-4xl text-endeavour-100 font-medium'>{translateStrings('profile.role')}</p>
       <img
-        src='./location.svg'
+        src='/location.svg'
         alt='location'
         width='40'
       />
       <p class='mt-3 opacity-80 text-xl'>Córdoba, Argentina</p>
     </div>
-    <div class='flex flex-col justify-center items-center gap-3'>
+    <div class='flex justify-center items-center gap-3'>
       <a
         href='mailto:joseiriartedev@gmail.com'
         target='_blank'
         rel='noopener noreferrer'
-        class='w-48 flex justify-center items-center gap-1 px-4 py-2 rounded-full text-sm font-medium border border-endeavour-600 bg-endeavour-500 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-200'
+        class='w-fit flex justify-center items-center gap-1 px-4 py-2 rounded-full text-sm font-medium border border-endeavour-600 bg-endeavour-500 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-200'
         ><img
-          src='./email.svg'
+          src='/email.svg'
           alt='email'
           class='size-4'
         />Email</a
@@ -26,9 +30,9 @@
         href='https://www.linkedin.com/in/jose-iriarte-/'
         target='_blank'
         rel='noopener noreferrer'
-        class='w-48 flex justify-center items-center gap-1 px-4 py-2 rounded-full text-sm font-medium border border-endeavour-600 bg-endeavour-500 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-200'
+        class='w-fit flex justify-center items-center gap-1 px-4 py-2 rounded-full text-sm font-medium border border-endeavour-600 bg-endeavour-500 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-200'
         ><img
-          src='./linkedin.svg'
+          src='/linkedin.svg'
           alt='linkedin'
           class='size-4'
         />LinkedIn</a
@@ -37,12 +41,12 @@
         href='#'
         target='_blank'
         rel='noopener noreferrer'
-        class='w-48 flex justify-center items-center gap-1 px-4 py-2 rounded-full text-sm font-medium border border-endeavour-600 bg-endeavour-500 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-200'
+        class='w-fit flex justify-center items-center gap-1 px-4 py-2 rounded-full text-sm font-medium border border-endeavour-600 bg-endeavour-500 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-200'
         ><img
-          src='./download.svg'
+          src='/download.svg'
           alt='download'
           class='size-4'
-        />Download CV</a
+        />{translateStrings('profile.cv')}</a
       >
     </div>
   </div>

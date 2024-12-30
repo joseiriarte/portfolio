@@ -1,11 +1,15 @@
 ---
 import Tag from './Tag.astro';
 
-const { name, description, image, tags, appUrl, repoUrl } = Astro.props;
+const { name, description, image, tags, appUrl, repoUrl, translateStrings } = Astro.props;
 ---
 
 <div class='max-w-sm bg-endeavour-90050 border border-endeavour-900 rounded-lg shadow'>
-  <a href={appUrl}>
+  <a
+    href={appUrl}
+    target='_blank'
+    rel='noopener noreferrer'
+  >
     <img
       class='rounded-t-lg hover:opacity-80 transition duration-200'
       src={image}
@@ -28,13 +32,15 @@ const { name, description, image, tags, appUrl, repoUrl } = Astro.props;
     </ul>
     <a
       href={repoUrl}
+      target='_blank'
+      rel='noopener noreferrer'
       class='inline-flex items-center px-3 py-2 gap-2 text-sm font-medium text-center rounded-lg border border-endeavour-600 bg-endeavour-500 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-200'
       ><img
-        src='./github.svg'
+        src='/github.svg'
         alt='GitHub logo'
         class='size-4'
       />
-      Source code
+      {translateStrings('projectcard.code')}
     </a>
   </div>
 </div>

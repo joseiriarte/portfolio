@@ -1,12 +1,14 @@
 ---
 import Skill from './Skill.astro';
+
+const { translateStrings } = Astro.props;
 ---
 
 <section
-  class='card-global w-full col-span-4'
+  class='card-global w-full scroll-m-16'
   id='skills'
 >
-  <h2 class='card-title mb-12'>Skills</h2>
+  <h2 class='card-title mb-12'>{translateStrings('skills.title')}</h2>
   <div class='w-full flex flex-wrap justify-center items-center gap-6'>
     <Skill
       name='HTML'
