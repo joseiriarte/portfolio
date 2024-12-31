@@ -1,9 +1,13 @@
 ---
+import LanguageSelector from './LanguageSelector.astro';
+
 const { translateStrings } = Astro.props;
 ---
 
-<nav class='w-full flex justify-center fixed z-20 top-0 start-0'>
-  <ul class='w-fit flex gap-3 py-2 px-3 mt-3 border border-endeavour-200 rounded-full bg-endeavour-800 font-medium'>
+<nav class='w-full flex justify-center items-center fixed z-20 top-0 start-0'>
+  <ul
+    class='w-fit flex justify-center items-center gap-3 py-2 px-3 mt-3 border border-endeavour-200 rounded-full bg-endeavour-800 font-medium'
+  >
     <li>
       <a
         href='#projects'
@@ -26,5 +30,6 @@ const { translateStrings } = Astro.props;
         >{translateStrings('navbar.3')}</a
       >
     </li>
+    <LanguageSelector />
   </ul>
 </nav>

@@ -84,7 +84,18 @@ const currentLang = Astro.currentLocale;
         font-size: 2.25rem;
         line-height: 2.5rem;
         font-weight: 600;
+        text-align: center;
+      }
+      @media screen and (max-width: 640px) {
+        .card-global {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+        }
       }
     </style>
+    <script
+      is:inline
+      src='https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js'
+    ></script>
   </body>
 </html>

@@ -5,20 +5,14 @@ import Layout from '../../layouts/Layout.astro';
 
 import { useTranslations } from '../../i18n/utils';
 import { languageList } from '../../i18n/ui';
-import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const currentLang = Astro.currentLocale || 'en';
 const translateStrings = useTranslations(currentLang as keyof typeof languageList);
-
-const esUrl = getRelativeLocaleUrl('es');
-const enUrl = getRelativeLocaleUrl('en');
 ---
 
 <Layout>
   <main class='w-full flex flex-col justify-center items-center'>
     <Navbar translateStrings={translateStrings} />
     <Main translateStrings={translateStrings} />
-    <a href={esUrl}>Espanol</a>
-    <a href={enUrl}>English</a>
   </main>
 </Layout>

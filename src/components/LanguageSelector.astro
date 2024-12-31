@@ -1,0 +1,44 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+
+const esUrl = getRelativeLocaleUrl('es');
+const enUrl = getRelativeLocaleUrl('en');
+---
+
+<button
+  id='dropdownDefaultButton'
+  data-dropdown-toggle='dropdown'
+  class='inline-flex justify-center items-center p-1 bg-endeavour-800 hover:bg-endeavour-600 active:bg-endeavour-700 border border-endeavour-200 rounded-full transition duration-150'
+  type='button'
+>
+  <img
+    src='/language.svg'
+    alt='Language selector'
+    class='size-6'
+  />
+</button>
+
+<div
+  id='dropdown'
+  class='z-10 hidden w-fit bg-endeavour-800 rounded-lg shadow'
+>
+  <ul
+    class='py-2 text-sm'
+    aria-labelledby='dropdownDefaultButton'
+  >
+    <li>
+      <a
+        href={enUrl}
+        class='block px-4 py-2 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-150'
+        >English</a
+      >
+    </li>
+    <li>
+      <a
+        href={esUrl}
+        class='block px-4 py-2 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-150'
+        >Español</a
+      >
+    </li>
+  </ul>
+</div>
