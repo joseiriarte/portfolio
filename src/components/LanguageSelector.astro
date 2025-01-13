@@ -2,7 +2,6 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 
 const esUrl = getRelativeLocaleUrl('es');
-const enUrl = getRelativeLocaleUrl('en');
 ---
 
 <button
@@ -28,7 +27,7 @@ const enUrl = getRelativeLocaleUrl('en');
   >
     <li>
       <a
-        href={enUrl}
+        href={'/'}
         class='block px-4 py-2 hover:bg-endeavour-600 active:bg-endeavour-700 transition duration-150'
         >English</a
       >
