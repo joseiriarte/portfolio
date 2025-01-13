@@ -11,7 +11,8 @@ export const strings = {
     'aboutme.p2': "Since then, I've been learning about software development, mostly as a self taught student.",
     'aboutme.p3':
       "I usually work with React, but I'm open to learning and working with any other technology if needed.",
-    'aboutme.p4': "Also, I'm fully able to communicate and work in both Spanish and English.",
+    'aboutme.p4':
+      "Even though right now I'm ready to work as a front-end developer, I've started learning about back-end, in order to become a full-stack developer.",
     'certifications.title': 'Certifications',
     'footer.text': 'Got a job offer? Want me to be part of your team? Just liked my portfolio? Let me know:',
     'languages.title': 'Languages',
@@ -37,7 +38,8 @@ export const strings = {
       'Desde entonces, he estado aprendiendo sobre desarrollo de software, en general de manera autodidacta.',
     'aboutme.p3':
       'Usualmente trabajo con React, pero estoy dispuesto a aprender y trabajar con cualquier otra tecnología de ser necesario.',
-    'aboutme.p4': 'Además, soy capaz de comunicarme y trabajar tanto en español como en inglés.',
+    'aboutme.p4':
+      'Aunque ahora estoy listo para trabajar como desarrollador front-end, he comenzado a aprender sobre back-end, para así convertirme en un desarrollador full-stack.',
     'certifications.title': 'Certificaciones',
     'footer.text': '¿Tenés una oferta? ¿Querés que sea parte de tu equipo? ¿Te gustó mi portfolio? Contactame:',
     'languages.title': 'Idiomas',
